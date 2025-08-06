@@ -1,6 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import './Skills.css';
+import { 
+  Code2, 
+  Server, 
+  Terminal,
+  Wrench,
+  Braces,
+  Database,
+  Globe,
+  Layout,
+  FileCode,
+  Github,
+  BarChart,
+  Box
+} from 'lucide-react';
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -12,44 +27,44 @@ const Skills = () => {
     {
       title: "Frontend Development",
       skills: [
-        { name: "React.js", level: 90, color: "bg-blue-500" },
-        { name: "HTML5", level: 95, color: "bg-orange-500" },
-        { name: "CSS3", level: 90, color: "bg-blue-400" },
-        { name: "JavaScript", level: 85, color: "bg-yellow-500" },
-        { name: "Tailwind CSS", level: 88, color: "bg-cyan-500" },
-      ]
+        { name: "React.js", icon: <Code2 />, class: "frontend" },
+        { name: "HTML5", icon: <Layout />, class: "frontend" },
+        { name: "CSS3", icon: <FileCode />, class: "frontend" },
+        { name: "JavaScript", icon: <Braces />, class: "frontend" },
+        { name: "Tailwind CSS", icon: <Globe />, class: "frontend" },
+      ],
     },
     {
       title: "Backend Development",
       skills: [
-        { name: "Node.js", level: 85, color: "bg-green-600" },
-        { name: "Express.js", level: 80, color: "bg-gray-600" },
-        { name: "MongoDB", level: 82, color: "bg-green-500" },
-        { name: "Firebase", level: 78, color: "bg-yellow-600" },
-        { name: "SQL", level: 75, color: "bg-blue-600" },
-      ]
+        { name: "Node.js", icon: <Server />, class: "backend" },
+        { name: "Express.js", icon: <Box />, class: "backend" },
+        { name: "MongoDB", icon: <Database />, class: "backend" },
+        { name: "Firebase", icon: <Server />, class: "backend" },
+        { name: "SQL", icon: <Database />, class: "backend" },
+      ],
     },
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", level: 88, color: "bg-blue-500" },
-        { name: "Java", level: 80, color: "bg-red-500" },
-        { name: "JavaScript", level: 85, color: "bg-yellow-500" },
-      ]
+        { name: "Python", icon: <Terminal />, class: "language" },
+        { name: "Java", icon: <FileCode />, class: "language" },
+        { name: "JavaScript", icon: <Braces />, class: "language" },
+      ],
     },
     {
       title: "Tools & Technologies",
       skills: [
-        { name: "GitHub", level: 90, color: "bg-gray-800" },
-        { name: "Pandas", level: 75, color: "bg-purple-500" },
-        { name: "NumPy", level: 75, color: "bg-blue-400" },
-        { name: "Matplotlib", level: 70, color: "bg-orange-400" },
-      ]
-    }
+        { name: "GitHub", icon: <Github />, class: "tool" },
+        { name: "Pandas", icon: <BarChart />, class: "tool" },
+        { name: "NumPy", icon: <Wrench />, class: "tool" },
+        { name: "Matplotlib", icon: <BarChart />, class: "tool" },
+      ],
+    },
   ];
 
   return (
-    <section id="skills" className="section-padding bg-white dark:bg-gray-900">
+    <section id="skills" className="section-padding bg-black">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -58,58 +73,48 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
             My <span className="gradient-text">Skills</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto mb-8 rounded-full"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            A comprehensive overview of my technical expertise and proficiency levels
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            A showcase of my technical expertise and tools I excel at
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {skillCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="card"
-            >
-              <h3 className="text-2xl font-semibold mb-8 text-center text-gray-800 dark:text-gray-200">
-                {category.title}
-              </h3>
-              
-              <div className="space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-lg font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-sm font-semibold text-primary-600 dark:text-primary-400">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                        transition={{ 
-                          duration: 1.5, 
-                          delay: categoryIndex * 0.2 + skillIndex * 0.1,
-                          ease: "easeOut"
-                        }}
-                        className={`h-full ${skill.color} rounded-full`}
-                      />
-                    </div>
-                  </div>
+        {skillCategories.map((category, idx) => (
+          <div key={category.title} className="mb-16">
+            <h3 className="text-2xl font-semibold mb-8 text-center text-gray-100">
+              {category.title}
+            </h3>
+            <div className="skills-container">
+              <div className="skill-group">
+                {[...category.skills, ...category.skills].map((skill, index) => (
+                  <motion.div
+                    key={index}
+                    className="skill-item text-gray-800 dark:text-gray-200"
+                    whileHover={{ y: -2 }}
+                  >
+                    <span className="skill-icon">{skill.icon}</span>
+                    {skill.name}
+                  </motion.div>
                 ))}
               </div>
-            </motion.div>
-          ))}
-        </div>
+              <div className="skill-group" aria-hidden="true">
+                {[...category.skills, ...category.skills].map((skill, index) => (
+                  <motion.div
+                    key={index + "clone"}
+                    className="skill-item text-gray-800 dark:text-gray-200"
+                    whileHover={{ y: -2 }}
+                  >
+                    <span className="skill-icon">{skill.icon}</span>
+                    {skill.name}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

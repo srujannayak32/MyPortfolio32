@@ -50,7 +50,7 @@ const Projects = () => {
         "Video calling integration",
         "Scheduling & booking"
       ],
-      status: "completed"
+      status: "in-progress"
     }
   ];
 
@@ -103,21 +103,20 @@ const Projects = () => {
                     >
                       <Github size={20} />
                     </motion.a>
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.1 }}
-                      className="p-3 bg-primary-600 rounded-full text-white hover:bg-primary-700 transition-colors"
-                    >
-                      <ExternalLink size={20} />
-                    </motion.a>
                   </div>
 
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-sm font-medium rounded-full">
-                      {project.status}
+                    <span className={`px-3 py-1 text-sm font-medium rounded-full ${
+                      project.status === 'completed' 
+                        ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
+                        : project.status === 'in-progress'
+                        ? 'bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200'
+                        : 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
+                    }`}>
+                      {project.status === 'completed' ? 'Completed' : 
+                       project.status === 'in-progress' ? 'Work in Progress' : 
+                       'Ongoing'}
                     </span>
                   </div>
                 </div>
@@ -151,20 +150,10 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.05 }}
-                      className="flex-1 btn-secondary text-center inline-flex items-center justify-center gap-2"
+                      className="w-full btn-primary text-center inline-flex items-center justify-center gap-2"
                     >
                       <Github size={16} />
-                      Code
-                    </motion.a>
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      className="flex-1 btn-primary text-center inline-flex items-center justify-center gap-2"
-                    >
-                      <Play size={16} />
-                      Demo
+                      View Code
                     </motion.a>
                   </div>
                 </div>
