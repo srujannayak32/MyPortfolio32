@@ -217,7 +217,7 @@ const Experience = () => {
                     
                     {/* Download Button */}
                     <motion.a
-                      href="/my_resume.pdf"
+                      href={`${import.meta.env.BASE_URL}my_resume.pdf`}
                       download="Maloth_Srujan_Nayak_Resume.pdf"
                       initial={{ y: 20, opacity: 0 }}
                       animate={inView ? { y: 0, opacity: 1 } : {}}

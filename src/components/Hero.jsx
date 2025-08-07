@@ -55,7 +55,7 @@ const Hero = () => {
             className="relative mx-auto w-48 h-48 mb-8 z-10"
           >
             <div className="w-full h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600 p-1 shadow-2xl">
-              <img src="/pfp2.jpeg" alt="Profile" className="w-full h-full rounded-full object-cover" />
+              <img src={`${import.meta.env.BASE_URL}pfp2.jpeg`} alt="Profile" className="w-full h-full rounded-full object-cover" />
             </div>
           </motion.div>
 
