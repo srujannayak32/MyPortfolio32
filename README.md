@@ -1,4 +1,91 @@
-# Maloth Srujan Nayak - Portfolio Website
+# Maloth Srujan Nayak - Portfolio Web8. **📧 Contact** - Interactive contact section with direct email integration
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- **Node.js** (v16.0.0 or higher)
+- **npm** or **yarn** package manager
+- Modern web browser
+
+### Installation & Setup
+
+1. **Clone the repository**:
+```bash
+git clone https://github.com/srujannayak32/VaultOfCodes.git
+cd VaultOfCodes
+```
+
+2. **Install dependencies**:
+```bash
+npm install
+```
+
+3. **Start development server**:
+```bash
+npm run dev
+```
+
+4. **View the portfolio**:
+   Open your browser and navigate to `http://localhost:5173`
+
+### Production Deployment
+
+**Build for production**:
+```bash
+npm run build
+```
+
+The built files will be generated in the `dist/` directory.
+
+## 🌐 GitHub Pages Deployment
+
+This project is configured for automatic deployment to GitHub Pages:
+
+1. **Enable GitHub Pages** in your repository settings
+2. **Set source** to "GitHub Actions"
+3. **Push to main branch** - the site will automatically deploy via GitHub Actions
+4. **Your site** will be available at: `https://srujannayak32.github.io/VaultOfCodes/`
+
+### Manual Deployment Steps
+
+If you need to deploy manually:
+
+```bash
+# Build the project
+npm run build
+
+# Deploy to GitHub Pages (using gh-pages package)
+npm install -g gh-pages
+gh-pages -d dist
+```
+
+## 🛠️ Troubleshooting Deployment Issues
+
+If you see a blank page or 404 errors:
+
+1. **Check vite.config.js** - Make sure `base: '/VaultOfCodes/'` is set
+2. **Verify asset paths** - All assets should be in the `public/` folder
+3. **Check GitHub Pages settings** - Ensure source is set to "GitHub Actions"
+4. **Clear browser cache** - Hard refresh the page
+
+## 📞 Contact & Connect
+
+**Maloth Srujan Nayak**  
+*Undergraduate IT Student | Web Developer | ML Enthusiast*
+
+- 📧 **Email**: [srujannayak32@gmail.com](mailto:srujannayak32@gmail.com)
+- 💼 **LinkedIn**: [linkedin.com/in/srujannayak](https://linkedin.com/in/srujannayak)
+- 🐱 **GitHub**: [github.com/srujannayak32](https://github.com/srujannayak32)
+- 🌐 **Portfolio**: [https://srujannayak32.github.io/VaultOfCodes/](https://srujannayak32.github.io/VaultOfCodes/)
+
+---
+
+### 🌟 Show Your Support
+
+Give a ⭐️ if this project helped or inspired you!
+
+**Built with ❤️ by Maloth Srujan Nayak**ite
 
 A modern, responsive personal portfolio website showcasing my professional journey as a Web Developer and IT student. Built with cutting-edge technologies including React.js, Tailwind CSS, and Framer Motion for an engaging user experience.
 
