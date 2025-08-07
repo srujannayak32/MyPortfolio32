@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Github, Linkedin, Mail, Download, Code, Sparkles } from 'lucide-react';
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -55,39 +55,8 @@ const Hero = () => {
             className="relative mx-auto w-48 h-48 mb-8 z-10"
           >
             <div className="w-full h-full rounded-full bg-gradient-to-r from-primary-400 to-primary-600 p-1 shadow-2xl">
-              <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-6xl font-bold text-primary-600 dark:text-primary-400 shadow-inner">
-                SN
-              </div>
+              <img src="pfp2.jpeg" alt="Profile" className="w-full h-full rounded-full object-cover" />
             </div>
-            
-            {/* Floating icons */}
-            <motion.div
-              animate={{ 
-                rotate: 360,
-                y: [0, -10, 0]
-              }}
-              transition={{ 
-                rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
-              }}
-              className="absolute -top-4 -right-4 w-12 h-12 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
-            >
-              <Code size={20} className="text-primary-600 dark:text-primary-400" />
-            </motion.div>
-            
-            <motion.div
-              animate={{ 
-                rotate: -360,
-                y: [0, 10, 0]
-              }}
-              transition={{ 
-                rotate: { duration: 15, repeat: Infinity, ease: "linear" },
-                y: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-              }}
-              className="absolute -bottom-2 -left-4 w-10 h-10 bg-white dark:bg-gray-800 rounded-full shadow-lg flex items-center justify-center"
-            >
-              <Sparkles size={16} className="text-yellow-500" />
-            </motion.div>
           </motion.div>
 
           {/* Name */}
@@ -97,7 +66,7 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
           >
-            <span className="gradient-text">Maloth Srujan Nayak</span>
+            <span className="gradient-text hero-name">Maloth Srujan Nayak</span>
           </motion.h1>
 
           {/* Title with typing effect */}

@@ -162,7 +162,7 @@ const About = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { number: "8.6", label: "Current GPA", suffix: "/10", color: "text-green-600" },
-                { number: "10+", label: "Projects", suffix: "", color: "text-blue-600" },
+                { number: "5+", label: "Projects", suffix: "", color: "text-blue-600" },
                 { number: "4", label: "Certifications", suffix: "", color: "text-purple-600" },
                 { number: "2+", label: "Years Learning", suffix: "", color: "text-orange-600" },
               ].map((stat, index) => (

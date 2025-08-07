@@ -73,14 +73,11 @@ const Footer = () => {
         <div className="my-8 h-px bg-gray-800"></div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+        <div className="flex flex-col md:flex-row justify-center items-center text-sm text-gray-400">
           <div className="flex items-center gap-1 mb-2 md:mb-0">
             <span>© {currentYear} Made with</span>
             <Heart size={16} className="text-red-500 animate-pulse" />
             <span>by Srujan Nayak</span>
-          </div>
-          <div>
-            <span>Built with React.js & Tailwind CSS</span>
           </div>
         </div>
       </div>

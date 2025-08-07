@@ -29,14 +29,24 @@ const Contact = () => {
     e.preventDefault();
     setFormStatus('sending');
     
-    // Simulate form submission
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Hi Srujan,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nBest regards,\n${formData.name}`
+    );
+    const mailtoLink = `mailto:srujannayak32@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
+    // Update status
     setTimeout(() => {
       setFormStatus('sent');
       setFormData({ name: '', email: '', subject: '', message: '' });
       
       // Reset status after 3 seconds
       setTimeout(() => setFormStatus(''), 3000);
-    }, 2000);
+    }, 1000);
   };
 
   const contactInfo = [
@@ -127,25 +137,6 @@ const Contact = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Quick Info */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-8 p-6 bg-primary-50 dark:bg-primary-900/20 rounded-xl border border-primary-200 dark:border-primary-800"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Clock size={20} className="text-primary-600 dark:text-primary-400" />
-                <h4 className="font-semibold text-gray-800 dark:text-gray-200">
-                  Response Time
-                </h4>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300">
-                I typically respond to emails within <span className="font-semibold text-primary-600 dark:text-primary-400">24 hours</span>. 
-                For urgent matters, feel free to connect with me on LinkedIn.
-              </p>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}

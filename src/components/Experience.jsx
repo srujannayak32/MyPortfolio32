@@ -172,7 +172,7 @@ const Experience = () => {
                 </motion.div>
               </div>
 
-              {/* Right side visual element for desktop */}
+              {/* Resume Download Section for desktop */}
               <div className={`hidden md:block md:w-5/12 ${
                 index % 2 === 0 ? 'md:ml-auto md:pl-8' : 'md:mr-auto md:pr-8'
               }`}>
@@ -182,56 +182,65 @@ const Experience = () => {
                   transition={{ duration: 0.8, delay: index * 0.3 + 0.2 }}
                   className="relative"
                 >
-                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg">
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="bg-white dark:bg-gray-600 rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">🚀</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-300">Innovation</div>
-                      </div>
-                      <div className="bg-white dark:bg-gray-600 rounded-lg p-3 shadow-sm">
-                        <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">⚡</div>
-                        <div className="text-sm text-gray-600 dark:text-gray-300">Fast Learning</div>
-                      </div>
-                    </div>
+                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg text-center">
+                    {/* Resume Icon */}
+                    <motion.div 
+                      initial={{ y: -20, opacity: 0 }}
+                      animate={inView ? { y: 0, opacity: 1 } : {}}
+                      transition={{ delay: index * 0.3 + 0.4 }}
+                      className="mx-auto w-20 h-20 bg-gradient-to-r from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg"
+                    >
+                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clipRule="evenodd" />
+                      </svg>
+                    </motion.div>
                     
-                    {/* Achievement Badges */}
-                    <div className="space-y-3">
-                      <motion.div 
-                        initial={{ x: -20, opacity: 0 }}
-                        animate={inView ? { x: 0, opacity: 1 } : {}}
-                        transition={{ delay: index * 0.3 + 0.5 }}
-                        className="flex items-center gap-3 bg-white dark:bg-gray-600 rounded-lg p-3"
-                      >
-                        <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                          <span className="text-green-600 dark:text-green-400">✓</span>
-                        </div>
-                        <span className="text-sm text-gray-700 dark:text-gray-300">Platform Enhancement</span>
-                      </motion.div>
-                      
-                      <motion.div 
-                        initial={{ x: -20, opacity: 0 }}
-                        animate={inView ? { x: 0, opacity: 1 } : {}}
-                        transition={{ delay: index * 0.3 + 0.7 }}
-                        className="flex items-center gap-3 bg-white dark:bg-gray-600 rounded-lg p-3"
-                      >
-                        <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                          <span className="text-blue-600 dark:text-blue-400">⭐</span>
-                        </div>
-                        <span className="text-sm text-gray-700 dark:text-gray-300">Team Collaboration</span>
-                      </motion.div>
-                      
-                      <motion.div 
-                        initial={{ x: -20, opacity: 0 }}
-                        animate={inView ? { x: 0, opacity: 1 } : {}}
-                        transition={{ delay: index * 0.3 + 0.9 }}
-                        className="flex items-center gap-3 bg-white dark:bg-gray-600 rounded-lg p-3"
-                      >
-                        <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center">
-                          <span className="text-purple-600 dark:text-purple-400">🎯</span>
-                        </div>
-                        <span className="text-sm text-gray-700 dark:text-gray-300">Goal Achievement</span>
-                      </motion.div>
-                    </div>
+                    {/* Resume Title */}
+                    <motion.h3 
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={inView ? { y: 0, opacity: 1 } : {}}
+                      transition={{ delay: index * 0.3 + 0.6 }}
+                      className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-4"
+                    >
+                      My Resume
+                    </motion.h3>
+                    
+                    {/* Resume Description */}
+                    <motion.p 
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={inView ? { y: 0, opacity: 1 } : {}}
+                      transition={{ delay: index * 0.3 + 0.8 }}
+                      className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed"
+                    >
+                      Download my complete resume to learn more about my professional experience, skills, and achievements.
+                    </motion.p>
+                    
+                    {/* Download Button */}
+                    <motion.a
+                      href="/my_resume.pdf"
+                      download="Maloth_Srujan_Nayak_Resume.pdf"
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={inView ? { y: 0, opacity: 1 } : {}}
+                      transition={{ delay: index * 0.3 + 1.0 }}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-flex items-center gap-3 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    >
+                      <svg className="w-5 h-5 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                      Download Resume
+                    </motion.a>
+                    
+                    {/* File Info */}
+                    <motion.div 
+                      initial={{ opacity: 0 }}
+                      animate={inView ? { opacity: 1 } : {}}
+                      transition={{ delay: index * 0.3 + 1.2 }}
+                      className="mt-4 text-xs text-gray-500 dark:text-gray-400"
+                    >
+                      PDF • Updated 2025
+                    </motion.div>
                   </div>
                 </motion.div>
               </div>

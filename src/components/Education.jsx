@@ -41,7 +41,7 @@ const Education = () => {
     {
       degree: "Secondary School (10th Grade)",
       institution: "Kendriya Vidyalaya",
-      location: "India",
+      location: "Ramagundam, Telangana",
       duration: "2020 - 2021",
       gpa: "8.3",
       status: "Completed",

@@ -152,17 +152,6 @@ const Certifications = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Action Button */}
-              <div className="mt-auto">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="w-full btn-secondary inline-flex items-center justify-center gap-2"
-                >
-                  <ExternalLink size={16} />
-                  View Credential
-                </motion.button>
-              </div>
             </motion.div>
           ))}
         </div>
