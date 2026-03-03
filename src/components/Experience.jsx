@@ -18,13 +18,13 @@ const Experience = () => {
       type: "Internship",
       description: [
         "Worked on EdTech training platform recognized by Google for Education and AICTE",
-        "Developed responsive web applications using modern technologies",
-        "Collaborated with cross-functional teams to deliver high-quality solutions",
-        "Gained hands-on experience in full-stack development",
-        "Contributed to platform improvements and feature implementations"
+        "Developed web applications using Python, Java, and modern web technologies",
+        "Explored AI concepts and prompt engineering in practical applications",
+        "Built and contributed to small web-based applications with real-world impact",
+        "Completed structured practical assignments and training modules"
       ],
-      technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS"],
-      current: true
+      technologies: ["React.js", "Python", "Java", "AI", "Prompt Engineering", "Web Development"],
+      current: false
     }
   ];
 

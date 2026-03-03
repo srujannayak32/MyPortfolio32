@@ -14,7 +14,11 @@ import {
   FileCode,
   Github,
   BarChart,
-  Box
+  Box,
+  Brain,
+  Cpu,
+  Eye,
+  Zap
 } from 'lucide-react';
 
 const Skills = () => {
@@ -28,6 +32,7 @@ const Skills = () => {
       title: "Frontend Development",
       skills: [
         { name: "React.js", icon: <Code2 />, class: "frontend" },
+        { name: "Next.js", icon: <Box />, class: "frontend" },
         { name: "HTML5", icon: <Layout />, class: "frontend" },
         { name: "CSS3", icon: <FileCode />, class: "frontend" },
         { name: "JavaScript", icon: <Braces />, class: "frontend" },
@@ -40,8 +45,8 @@ const Skills = () => {
         { name: "Node.js", icon: <Server />, class: "backend" },
         { name: "Express.js", icon: <Box />, class: "backend" },
         { name: "MongoDB", icon: <Database />, class: "backend" },
+        { name: "MySQL", icon: <Database />, class: "backend" },
         { name: "Firebase", icon: <Server />, class: "backend" },
-        { name: "SQL", icon: <Database />, class: "backend" },
       ],
     },
     {
@@ -50,15 +55,36 @@ const Skills = () => {
         { name: "Python", icon: <Terminal />, class: "language" },
         { name: "Java", icon: <FileCode />, class: "language" },
         { name: "JavaScript", icon: <Braces />, class: "language" },
+        { name: "SQL", icon: <Database />, class: "language" },
+      ],
+    },
+    {
+      title: "AI/ML & Computer Vision",
+      skills: [
+        { name: "Machine Learning", icon: <Brain />, class: "ai" },
+        { name: "Deep Learning", icon: <Cpu />, class: "ai" },
+        { name: "Computer Vision", icon: <Eye />, class: "ai" },
+        { name: "Prompt Engineering", icon: <Brain />, class: "ai" },
+      ],
+    },
+    {
+      title: "Big Data & Analytics",
+      skills: [
+        { name: "Hadoop", icon: <Database />, class: "bigdata" },
+        { name: "Spark", icon: <Zap />, class: "bigdata" },
+        { name: "PySpark", icon: <Terminal />, class: "bigdata" },
+        { name: "Pandas", icon: <BarChart />, class: "bigdata" },
       ],
     },
     {
       title: "Tools & Technologies",
       skills: [
+        { name: "Git", icon: <Github />, class: "tool" },
         { name: "GitHub", icon: <Github />, class: "tool" },
-        { name: "Pandas", icon: <BarChart />, class: "tool" },
         { name: "NumPy", icon: <Wrench />, class: "tool" },
         { name: "Matplotlib", icon: <BarChart />, class: "tool" },
+        { name: "WebRTC", icon: <Globe />, class: "tool" },
+        { name: "Socket.io", icon: <Server />, class: "tool" },
       ],
     },
   ];

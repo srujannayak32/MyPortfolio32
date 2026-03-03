@@ -11,8 +11,22 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "ProcTesting",
+      description: "Intelligent proctored examination platform supporting heterogeneous devices and low-bandwidth environments. Features AI-based cheating detection, behavioral analysis, and blockchain-based storage for tamper-resistant exam records.",
+      technologies: ["Python", "AI/ML", "Computer Vision", "Blockchain", "WebRTC", "React"],
+      github: "https://github.com/srujannayak32",
+      demo: "#",
+      features: [
+        "AI-based cheating detection with weighted integrity scoring",
+        "Python-based AI agents for automated test generation",
+        "Computer vision for identity verification and monitoring",
+        "Blockchain-based storage for audit trails"
+      ],
+      status: "completed"
+    },
+    {
       title: "SkillSphere",
-      description: "Live skill exchange platform using Next.js, Firebase, WebRTC, Socket.io. Real-time rooms with whiteboards, video/audio calling for seamless learning experiences.",
+      description: "Real-time skill exchange platform using Next.js, Firebase, WebRTC, Socket.io. Enables users to connect and conduct live mentoring sessions with interactive whiteboards and video/audio calling.",
       technologies: ["Next.js", "Firebase", "WebRTC", "Socket.io", "React", "Node.js"],
       github: "https://github.com/srujannayak32",
       demo: "#",
@@ -26,31 +40,17 @@ const Projects = () => {
     },
     {
       title: "Ease of Event Attendance",
-      description: "Event attendance portal built with HTML, JDBC-Servlets, and SQL. Users can upload certificates to gain event attendance credits and track their participation.",
-      technologies: ["HTML", "CSS", "Java", "JDBC", "Servlets", "MySQL"],
+      description: "Web application that allows students to upload participation certificates to automatically generate event attendance records and track their involvement in various activities.",
+      technologies: ["HTML", "CSS", "Java", "Servlets", "SQL", "JDBC"],
       github: "https://github.com/srujannayak32",
       demo: "#",
       features: [
         "Certificate upload system",
-        "Attendance tracking",
-        "Event management",
-        "User dashboard"
+        "Automatic attendance record generation",
+        "Event management and tracking",
+        "User dashboard and reports"
       ],
       status: "completed"
-    },
-    {
-      title: "TutorFinder",
-      description: "MERN stack application that connects tutors with students. Features include user profiles, real-time chat, video calls, and scheduling system.",
-      technologies: ["MongoDB", "Express.js", "React", "Node.js", "Socket.io", "WebRTC"],
-      github: "https://github.com/srujannayak32",
-      demo: "#",
-      features: [
-        "Tutor-student matching",
-        "Real-time chat system",
-        "Video calling integration",
-        "Scheduling & booking"
-      ],
-      status: "in-progress"
     }
   ];
 

@@ -11,6 +11,16 @@ const Certifications = () => {
 
   const certifications = [
     {
+      title: "Salesforce Certified Agentforce Specialist",
+      issuer: "Salesforce",
+      level: "Professional",
+      date: "2025",
+      description: "Official Salesforce certification demonstrating expertise in Agentforce platform, AI-powered agent development, and CRM automation.",
+      skills: ["Salesforce", "AI Agents", "CRM", "Platform Development", "Automation"],
+      icon: "☁️",
+      color: "purple"
+    },
+    {
       title: "NPTEL Google Cloud",
       issuer: "NPTEL (National Programme on Technology Enhanced Learning)",
       level: "Silver",
@@ -21,19 +31,9 @@ const Certifications = () => {
       color: "yellow"
     },
     {
-      title: "CS50x: Introduction to Computer Science",
-      issuer: "Harvard University",
-      level: "Professional Certificate",
-      date: "2024",
-      description: "Harvard's comprehensive introduction to computer science and programming, covering algorithms, data structures, and software engineering.",
-      skills: ["C Programming", "Python", "SQL", "HTML/CSS", "JavaScript", "Algorithms"],
-      icon: "🎓",
-      color: "red"
-    },
-    {
       title: "Python (Basic) - 4 Star",
       issuer: "HackerRank",
-      level: "4 Star Rating",
+      level: "4 Star Programmer",
       date: "2024",
       description: "Demonstrated proficiency in Python programming through comprehensive skill assessment and coding challenges.",
       skills: ["Python Programming", "Data Structures", "Algorithms", "Problem Solving"],
@@ -54,6 +54,8 @@ const Certifications = () => {
 
   const getColorClasses = (color) => {
     switch (color) {
+      case 'purple':
+        return 'bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400';
       case 'yellow':
         return 'bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400';
       case 'red':

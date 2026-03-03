@@ -72,13 +72,14 @@ const About = () => {
                 
                 <p>
                   My journey in technology is driven by curiosity and the desire to solve real-world problems 
-                  through innovative solutions. I thrive in collaborative environments where I can contribute 
-                  to building cutting-edge technology that makes a meaningful impact.
+                  through innovative solutions. I've participated in the <span className="font-semibold text-primary-600 dark:text-primary-400">Amazon Machine Learning Hackathon</span> (Top 200 rank) 
+                  and attended a <span className="font-semibold text-primary-600 dark:text-primary-400">Machine Learning Bootcamp at IIIT Hyderabad</span>, where I explored advanced 
+                  ML techniques including hyperparameter tuning, optimization strategies, and convergence improvements.
                 </p>
                 
                 <p>
-                  When I'm not coding, you'll find me exploring new technologies, contributing to open-source 
-                  projects, or learning about the latest developments in AI and machine learning. I believe 
+                  When I'm not coding, you'll find me exploring new technologies, working on AI/ML projects, 
+                  or diving deep into Big Data technologies like Hadoop and Spark. I believe 
                   in continuous learning and staying ahead of the technological curve.
                 </p>
               </div>
@@ -162,9 +163,9 @@ const About = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
                 { number: "8.6", label: "Current GPA", suffix: "/10", color: "text-green-600" },
-                { number: "5+", label: "Projects", suffix: "", color: "text-blue-600" },
-                { number: "4", label: "Certifications", suffix: "", color: "text-purple-600" },
-                { number: "2+", label: "Years Learning", suffix: "", color: "text-orange-600" },
+                { number: "3", label: "Major Projects", suffix: "+", color: "text-blue-600" },
+                { number: "4", label: "Certifications", suffix: "+", color: "text-purple-600" },
+                { number: "Top 200", label: "Amazon ML Hackathon", suffix: "", color: "text-orange-600" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
